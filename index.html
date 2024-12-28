@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <center>
+        <h1>Maths Function In JAVA Script</h1>
+        <p>Enter a number and please select a math operation</p>
+
+        <input id="number" type="text" placeholder="Enter your value">
+
+        <br>
+        <br>
+
+        <select id="operation">
+            <option value="sqrt">Square root</option>
+            <option value="abs">Absolute Value</option>
+            <option value="ceil">Ceiling</option>
+            <option value="floor">Floor</option>
+            <option value="round">Round</option>
+            <option value="pow2">Power</option>
+        </select>
+
+        <script>
+            function calculate() {
+                var num=parseFloat(document.getElementById("number").value);
+                var operation=document.getElementById("operation").value;
+                
+                if(isNaN(num)) {
+                    document.getElementById("result")
+                    .innerText="please enter a valid number.";
+                    return;
+                }
+
+                var operations= {
+                    sqrt:Math.sqrt(num),
+                    abs:Math.abs(num),
+                    ceil:Math.ceil(num),
+                    floor:Math.floor(num),
+                    round:Math.round(num),
+                    pow2:Math.pow(num,2)
+                }
+
+                documen.getElementById("result")
+                .innerText= 'Result: $
+                {operations[operation]}'                                                                                             
+            }
+        </script>
+    </center>
+    </body>
+</html>
